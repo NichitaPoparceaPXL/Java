@@ -123,5 +123,7 @@ Gebruik waar het kan een **method reference** (`Act::getStartTime`, `Act::isHead
 ## Afspraken
 
 - Je cursus, je eigen oefeningen en de Spring-documentatie mag je gebruiken.
+- **AI-tools zijn niet toegestaan:** geen ChatGPT, Claude, Copilot, Gemini, de AI-assistent in
+  IntelliJ of gelijkaardige tools. Zet AI-code-aanvulling in je IDE uit voor je begint.
 - Werk alleen.
 - Na 2 uur push je wat je hebt, ook als het niet af is.
