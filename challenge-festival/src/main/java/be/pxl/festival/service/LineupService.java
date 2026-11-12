@@ -7,10 +7,7 @@ import be.pxl.festival.model.Stage;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class LineupService {
@@ -50,4 +47,17 @@ public class LineupService {
     public List<Act> findAll() {
         return new ArrayList<>(acts.values());
     }
-}
+
+    public List<Act> findByDay(String day){
+        if(day.equals("")){
+            return findAll();
+        }
+        else{
+            return acts.values().stream()
+                    .filter(act -> act.getDay().name().equalsIgnoreCase(day))
+                    .toList();
+
+            }
+        }
+    }
+
