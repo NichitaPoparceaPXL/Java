@@ -48,16 +48,23 @@ public class LineupService {
         return new ArrayList<>(acts.values());
     }
 
-    public List<Act> findByDay(String day){
-        if(day.equals("")){
-            return findAll();
-        }
-        else{
-            return acts.values().stream()
-                    .filter(act -> act.getDay().name().equalsIgnoreCase(day))
-                    .toList();
+    public List<Act> findAll(String day) {
 
-            }
-        }
+
+        return acts.values().stream()
+                .filter(act -> act.getDay().name().equalsIgnoreCase(day))
+                .toList();
+
+
     }
+
+    public Act findById(long id){
+        return acts.get(id);
+    }
+
+    public Act create(Act act) {
+        add(act);
+        return act;
+    }
+}
 
