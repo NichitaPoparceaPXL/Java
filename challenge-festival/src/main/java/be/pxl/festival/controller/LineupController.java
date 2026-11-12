@@ -31,6 +31,17 @@ public class LineupController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Act create(@RequestBody Act act){
-        return service.create(act);
+        return lineupService.create(act);
+    }
+
+    @PutMapping("/{id}")
+    public Act update(@PathVariable Long id, @RequestBody Act act) {
+        return lineupService.update(id, act);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id){
+        lineupService.delete(id);
     }
 }

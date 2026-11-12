@@ -66,5 +66,15 @@ public class LineupService {
         add(act);
         return act;
     }
+
+    public Act update(Long id, Act act){
+        act.setId(id);
+        acts.put(id, act);
+        return act;
+    }
+
+    public void delete(Long id){
+        acts.remove(id);
+    }
 }
 
